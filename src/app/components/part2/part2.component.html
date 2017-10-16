@@ -1,0 +1,222 @@
+<titlerow [partInfo]="info"></titlerow>
+<div class="left-panel">
+    <div class="sectionEF ajust-title-font">
+        <div class="section-title">
+            Partner’s identifying number
+        </div>
+        <input class="section-input" name="parnterID" [(ngModel)]="form.partnerID">
+        <div class="section-title ajust-top-margin ">
+            Partner’s name, address, city, state, and ZIP code
+        </div>
+        <textarea class="section-textarea ajust-section-text-height" name="parnterInfo" [(ngModel)]="form.parternInfo">
+        </textarea>
+    </div>
+    <div class="sectionG ajust-title-font">
+        <label class="container">
+            <span class="">
+                General partner or LLC member-manager
+            </span>
+            <input type="radio" value="Genreal" name="sectionG" [(ngModel)]="form.sectionG">
+            <span class="checkmark"></span>
+        </label>
+        <br>
+        <label class="container">
+            <span class="">
+                Limited partner or other LLC member
+            </span>
+            <input type="radio" value="limited" name="sectionG" [(ngModel)]="form.sectionG">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="sectionH ajust-title-font">
+        <label class="container">
+            <span class="">
+                 Domestic partner
+            </span>
+            <input type="radio" value="domestic" name="sectionH" [(ngModel)]="form.sectionH"/>
+            <span class="checkmark"></span>
+        </label>
+        <br>
+        <label class="container">
+            <span class="">
+                 Foreign partner
+            </span>
+            <input type="radio" value="foreign" name="sectionH" [(ngModel)]="form.sectionH"/>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div class="sectionI1">
+        <div class="section-title  ajust-title-font">
+            What type of entity is this partner?
+        </div>
+        <input class="section-input" name="sectionI1" [(ngModel)]="form.sectionI1">
+    </div>
+    <div class="sectionI2">
+        <label class="container">
+            <span class="ajust-title-font">
+                If this partner is a retirement plan (IRA/SEP/Keogh/etc.),
+                check here
+            </span>
+            <input type="checkbox" name="sectionI2" [(ngModel)]="form.sectionI2">
+            <span class="retcheck"></span>
+        </label>
+    </div>
+    <div class="pre-next-sec">
+        <div class="sub-nav-left" (click)="goto('1')">
+            <div class="nav-button-left">
+                PREVIOUS PART
+            </div>
+        </div>
+        <div class="sub-nav-right" (click)="goto('3')">
+            <div class="nav-button-right">
+                NEXT PART
+            </div>
+        </div>
+    </div>
+</div>
+<div class="right-panel">
+    <div class="right-pannel-up">
+        <div class="section-title ajust-top-margin ajust-title-font">
+            Partner’s share of profit, loss, and capital
+            <span class="right-question" (click)="openIns()">?</span>
+        </div>
+        <table class="share-table">
+            <tr>
+                <th colspan="3">
+                    Begining
+                </th>
+                <th colspan="2">
+                    Ending
+                </th>
+            </tr>
+            <tr>
+                <td>Profit</td>
+                <td><input [(ngModel)]="form.partenerShare[0][0]" /></td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.partenerShare[0][1]" /></td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td>Loss</td>
+                <td><input [(ngModel)]="form.partenerShare[1][0]" /></td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.partenerShare[1][1]" /></td>
+                <td>%</td>
+            </tr>
+            <tr>
+                <td>Capital</td>
+                <td><input [(ngModel)]="form.partenerShare[2][0]" /></td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.partenerShare[2][1]" /></td>
+                <td>%</td>
+            </tr>
+        </table>
+        <table class="right-table-2 right-table-2-pos">
+            <tr>
+                <td>Partner’s share of liabilities at year end: Nonrecourse </td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionK[0]" /></td>
+            </tr>
+            <tr>
+                <td>Qualified nonrecourse financing</td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionK[1]" /></td>
+            </tr>
+            <tr>
+                <td>Recourse</td>
+                <td>%</td>
+                <td><input/></td>
+            </tr>
+        </table>
+    </div>
+    <div class="right-pannel-down">
+        <table class="right-table-2 right-table-3-pos">
+            <tr>
+                <td>Partner’s capital account analysis: Beginning capital account</td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionL1[0]" /></td>
+            </tr>
+            <tr>
+                <td>Capital contributed during the year</td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionL1[1]" /></td>
+            </tr>
+            <tr>
+                <td>Current year increase (decrease) </td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionL1[2]" /></td>
+            </tr>
+            <tr>
+                <td>Withdrawals & distributions </td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionL1[3]" /></td>
+            </tr>
+            <tr>
+                <td>Ending-capital-accou </td>
+                <td>%</td>
+                <td><input [(ngModel)]="form.sectionL1[4]" /></td>
+            </tr>
+        </table>
+        <div class="sectionLselect ajust-title-font">
+            <label class="container sectionLselect-len">
+                <span class="">
+                    Tax basis
+                </span>
+                <input type="radio" name="L1" value="basis" [(ngModel)]="form.sectionL2">
+                <span class="retcheck ajust-check"></span>
+            </label>
+            <label class="container sectionLselect-len">
+                <span class="">
+                    GAAP
+                </span>
+                <input type="radio" name="L1" value="GAAP" [(ngModel)]="form.sectionL2">
+                <span class="retcheck ajust-check"></span>
+            </label>
+            <label class="container sectionLselect-len">
+                <span class="">
+                     Section 704(b) book
+                </span>
+                <input type="radio" name="L1" value="book" [(ngModel)]="form.sectionL2">
+                <span class="retcheck ajust-check"></span>
+            </label>
+            <label class="container sectionLselect-len">
+                <span class="">
+                    Other
+                </span>
+                <input type="radio" name="L1" value="other" [(ngModel)]="form.sectionL2">
+                <span class="retcheck ajust-check"></span>
+            </label>
+        </div>
+        <div class="sectionM">
+            <div class="section-title ajust-title-font float-left">
+                Did the partner contribute property with a built-in gain or loss?
+            </div>
+            <div class="sectionMselect">
+                <label class="container sectionMselect-len">
+                            <span class="">
+                                 Yes
+                            </span>
+                            <input type="radio" name="L1" value="true" [(ngModel)]="form.sectionM">
+                            <span class="retcheck"></span>
+                        </label>
+                <label class="container sectionMselect-len">
+                            <span class="">
+                                No
+                            </span>
+                            <input type="radio" name="L1" value="false" [(ngModel)]="form.sectionM">
+                            <span class="retcheck"></span>
+                        </label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="down-panel">
+    <div class="down-panel-btn-group">
+        <div class="btn button1" (click)="goto('3')">
+            Next
+        </div>
+        <div class="btn button2" (click)="clear()">
+            Clear
+        </div>
+    </div>
+</div>

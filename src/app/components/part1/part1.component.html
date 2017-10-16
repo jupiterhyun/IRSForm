@@ -1,0 +1,145 @@
+<titlerow [partInfo]="info"></titlerow>
+<!-- <form>
+    <input id="name" name="name" class="form-control" required minlength="4" [(ngModel)]="hero.name" #name="ngModel">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors.required">
+            Name is required.
+        </div>
+        <div *ngIf="name.errors.minlength">
+            Name must be at least 4 characters long.
+        </div>
+    </div>
+    <input id="alterEgo" name="alterEgo" class="form-control" pattern="[0-9]{2}" required [(ngModel)]="hero.alterEgo" #alterEgo="ngModel">
+    <div>
+        {{alterEgo.errors | show}}
+    </div>
+    <div *ngIf="alterEgo.invalid && (alterEgo.dirty || alterEgo.touched)" class="alert alert-danger">
+        <div *ngIf="alterEgo.errors.required">
+            this is needed
+        </div>
+        <div *ngIf="alterEgo.errors">
+            Only two numbers
+        </div>
+    </div>
+</form> -->
+
+<form id="formPart1" name="formPart1" #formPart1="ngForm">
+    <div class="left-panel">
+        <div class="left-up">
+            <div class="form-select">
+                <label class="container sectionMselect-len">
+                <span class="Tax-basis">
+                    Final K-1
+                </span>
+                <input type="radio" name="formType" value="final" [(ngModel)]="form.formType">
+                <span class="retcheck"></span>
+            </label>
+                <label class="container sectionMselect-len">
+                <span class="Tax-basis">
+                    Amended K-1
+                </span>
+                <input type="radio" name="formType" value="amended" [(ngModel)]="form.formType">
+                <span class="retcheck"></span>
+            </label>
+            </div>
+            <div class="section-year">
+                <span>For calender year 2016, or tax year beginning</span>
+                <input class="input-under" id="startMonth" name="startMonth" pattern="^([1-9]|1[012])$" required #startMonth="ngModel" [(ngModel)]="form.startMonth" /><span>, 2016 ending</span>
+                <input class="input-under " id="endMonth" name="endMonth " pattern="^([1-9]|1[012])$" required #endMonth="ngModel" [(ngModel)]="form.endMonth " /><span>, 20</span>
+                <input class="input-under " id="endYear" name="endYear " pattern="^(1[6-9])$" required #endYear="ngModel" [(ngModel)]="form.endYear " />
+                <div *ngIf="startMonth.invalid && (startMonth.dirty || startMonth.touched)" class="alert alert-danger">
+                    <div *ngIf="startMonth.errors.required">
+                        Start Month is Required
+                    </div>
+                    <div *ngIf="startMonth.errors">
+                        Month: 1 to 12
+                    </div>
+                </div>
+                <div *ngIf="endMonth.invalid && (endMonth.dirty || endMonth.touched)" class="alert alert-danger">
+                    <div *ngIf="endMonth.errors.required">
+                        End Month is Required
+                    </div>
+                    <div *ngIf="endMonth.errors">
+                        Month: 1 to 12
+                    </div>
+                </div>
+                <div *ngIf="endYear.invalid && (endYear.dirty || endYear.touched)" class="alert alert-danger">
+                    <div *ngIf="endYear.errors.required">
+                        Year is Required
+                    </div>
+                    <div *ngIf="endYear.errors">
+                        Month: 16 to 19
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pre-next-sec ">
+            <div class="sub-nav-left">
+                <div class="nav-button-left ">
+                    PREVIOUS PART
+                </div>
+            </div>
+            <div class="sub-nav-right" (click)="goto( '2') ">
+                <div class="nav-button-right ">
+                    NEXT PART
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-panel ">
+        <div class="section-partnership ">
+            <div class="sectionA ">
+                <div class="section-title">
+                    Partnership's employer identification number
+                </div>
+                <input class="section-input" id="partnershipID" name="partnershipID" pattern="^[0-9]{6,9}$" required #partnershipID="ngModel" [(ngModel)]="form.partnershipID ">
+                <div *ngIf="partnershipID.invalid && (partnershipID.dirty || partnershipID.touched)" class="alert alert-danger alert-pos">
+                    <span class="arrow-left"></span>
+                    <div *ngIf="partnershipID.errors.required">
+                        PartnershipID is Required
+                    </div>
+                    <div *ngIf="partnershipID.errors">
+                        Numbers between 6-9 digits
+                    </div>
+                </div>
+            </div>
+            <div class="sectionB">
+                <div class="section-title">
+                    Partnerships name, address, city, state, and ZIP code
+                </div>
+                <textarea class="section-textarea " id="partnershipInfo" name="partnershipInfo" required #partnershipInfo="ngModel" [(ngModel)]="form.partnershipInfo "></textarea>
+                <div *ngIf="partnershipInfo.invalid && (partnershipInfo.dirty || partnershipInfo.touched)" class="alert alert-danger alert-pos">
+                    <span class="arrow-left"></span>
+                    <div *ngIf="partnershipInfo.errors.required">
+                        Partnership Information is Required
+                    </div>
+                </div>
+            </div>
+            <div class="sectionC ">
+                <div class="section-title">
+                    IRS center where partnership filed return
+                </div>
+                <input class="section-input" name="center" [(ngModel)]="form.IRScenter ">
+            </div>
+            <div class="sectionD ">
+                <label class="container">
+                    <span class="Tax-basis">
+                       Check if this is a publicly traded partnership (PTP)
+                    </span>
+                    <input type="checkbox" name="traded " value="traded " [(ngModel)]="form.isPublicTraded ">
+                    <span class="retcheck ajust-for-block "></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="down-panel">
+        <div class="down-panel-btn-group">
+            <div class="btn button1" (click)="goto( '2') ">
+                Next
+            </div>
+            <div class="btn button2" (click)="clear() ">
+                Clear
+            </div>
+        </div>
+    </div>
+</form>

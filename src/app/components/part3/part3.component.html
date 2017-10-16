@@ -1,0 +1,244 @@
+<titlerow [partInfo]="info"></titlerow>
+<div class="left-panel">
+    <div class="left-up">
+        <div class="left-item">
+            <div class="left-item-left">
+                1
+            </div>
+            <div class="section-title-font10">
+                Ordinary Business Income (loss)
+            </div>
+            <input class="section-input-font10" name="part31" [(ngModel)]="form.part31" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                2
+            </div>
+            <div class="section-title-font10">
+                Net rental real estate income (loss)
+            </div>
+            <input class="section-input-font10" name="part32" [(ngModel)]="form.part32" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                3
+            </div>
+            <div class="section-title-font10">
+                Other net rental income (loss)
+            </div>
+            <input class="section-input-font10" name="part33" [(ngModel)]="form.part33" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                4
+            </div>
+            <div class="section-title-font10">
+                Guaranteed payments
+            </div>
+            <input class="section-input-font10" name="part34" [(ngModel)]="form.part34" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                5
+            </div>
+            <div class="section-title-font10">
+                interest income
+            </div>
+            <input class="section-input-font10" name="part35" [(ngModel)]="form.part35" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                6a
+            </div>
+            <div class="section-title-font10">
+                Ordinary dividends
+            </div>
+            <input class="section-input-font10" name="part36a" [(ngModel)]="form.part36a" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                6b
+            </div>
+            <div class="section-title-font10">
+                Qualified dividends
+            </div>
+            <input class="section-input-font10" name="part36b" [(ngModel)]="form.part36b" />
+        </div>
+        <div class="left-item">
+            <div class="left-item-left">
+                7
+            </div>
+            <div class="section-title-font10">
+                Roylties
+            </div>
+            <input class="section-input-font10" name="part37" [(ngModel)]="form.part37" />
+        </div>
+
+    </div>
+    <div class="pre-next-sec">
+        <div class="sub-nav-left" (click)="goto('2')">
+            <div class="nav-button-left">
+                PREVIOUS PART
+            </div>
+        </div>
+        <div class="sub-nav-right">
+            <div class="nav-button-right">
+                NEXT PART
+            </div>
+        </div>
+    </div>
+</div>
+<div class="right-panel">
+    <div class="right-panel-left">
+        <div class="right-item-col1">
+            <div class="right-item-left">
+                8
+            </div>
+            <div class="section-title-font9">
+                Net short-term capital gain (loss)
+            </div>
+            <input class="section-input-font9" name="part38" [(ngModel)]="form.part38" />
+        </div>
+        <div class="right-item-col1">
+            <div class="right-item-left">
+                9a
+            </div>
+            <div class="section-title-font9">
+                Net long-term capital gain (loss)
+            </div>
+            <input class="section-input-font9" name="part39a" [(ngModel)]="form.part39a" />
+        </div>
+        <div class="right-item-col1">
+            <div class="right-item-left">
+                9b
+            </div>
+            <div class="section-title-font9">
+                Collectibles (28%) gain (loss)
+            </div>
+            <input class="section-input-font9" name="part39b" [(ngModel)]="form.part39b" />
+        </div>
+        <div class="right-item-col1">
+            <div class="right-item-left">
+                9c
+            </div>
+            <div class="section-title-font9">
+                Unrecaptuured section 1250 gain
+            </div>
+            <input class="section-input-font9" name="part39c" [(ngModel)]="form.part39c" />
+        </div>
+        <div class="right-item-col1">
+            <div class="right-item-left">
+                10
+            </div>
+            <div class="section-title-font9">
+                Net section 1231 gain (loss)
+            </div>
+            <input class="section-input-font9" name="part310" [(ngModel)]="form.part310" />
+        </div>
+        <div class="right-item-col3">
+            <div class="right-item3-left">
+                11
+            </div>
+            <div class="section-title-font9">
+                Other income (loss)
+            </div>
+            <input *ngFor="let row of form.part311;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part311[i]" [(ngModel)]="form.part311[i]" />
+        </div>
+        <div class="right-item-col1">
+            <div class="right-item-left">
+                12
+            </div>
+            <div class="section-title-font9">
+                Section 179 deduction
+            </div>
+            <input class="section-input-font9" name="part312" [(ngModel)]="form.part312" />
+        </div>
+
+    </div>
+    <div class="right-panel-middle">
+        <div class="right-item-col3">
+            <div class="right-item3-left">
+                13
+            </div>
+            <div class="section-title-font9">
+                Other deductions
+            </div>
+            <input *ngFor="let row of form.part313;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part313[i]" [(ngModel)]="form.part313[i]" />
+        </div>
+        <div class="right-item-col2">
+            <div class="right-item2-left">
+                14
+            </div>
+            <div class="section-title-font9">
+                Self-employment earnings (loss)
+            </div>
+            <input *ngFor="let row of form.part314;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part314[i]" [(ngModel)]="form.part314[i]" />
+        </div>
+        <div class="right-item-col2">
+            <div class="right-item2-left">
+                15
+            </div>
+            <div class="section-title-font9">
+                Credits
+            </div>
+            <input *ngFor="let row of form.part315;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part315[i]" [(ngModel)]="form.part315[i]" />
+        </div>
+        <div class="right-item-col7">
+            <div class="right-item7-left">
+                16
+            </div>
+            <div class="section-title-font9">
+                Foreign transactions
+            </div>
+            <input *ngFor="let row of form.part316;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part316[i]" [(ngModel)]="form.part316[i]" />
+        </div>
+    </div>
+    <div class="right-panel-right">
+        <div class="right-item-col3">
+            <div class="right-item3-left">
+                17
+            </div>
+            <div class="section-title-font9">
+                Alternative minimum tax (AMT) items
+            </div>
+            <input *ngFor="let row of form.part317;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part317[i]" [(ngModel)]="form.part317[i]" />
+        </div>
+        <div class="right-item-col3-big">
+            <div class="right-item3-left-big">
+                18
+            </div>
+            <div class="section-title-font9">
+                Tax-exempt income and nondeductible expenes
+            </div>
+            <input *ngFor="let row of form.part318;let i = index;trackBy:trackByIndex" class="section-input-font9 ajust-input" name="part318[i]" [(ngModel)]="form.part318[i]" />
+        </div>
+        <div class="right-item-col2">
+            <div class="right-item2-left">
+                19
+            </div>
+            <div class="section-title-font9">
+                Distributions
+            </div>
+            <input *ngFor="let row of form.part319;let i = index;trackBy:trackByIndex" class="section-input-font9" name="part319[i]" [(ngModel)]="form.part319[i]" />
+        </div>
+        <div class="right-item-col4">
+            <div class="right-item4-left">
+                20
+            </div>
+            <div class="section-title-font9">
+                Other information
+            </div>
+            <input *ngFor="let row of form.part320;let in = index;trackBy:trackByIndex" class="section-input-font9" name="part320[{{in}}]" [(ngModel)]="form.part320[in]" />
+        </div>
+    </div>
+</div>
+<div class="down-panel">
+    <div class="down-panel-btn-group">
+        <div class="btn button1">
+            Submit
+        </div>
+        <div class="btn button2" (click)="clear()">
+            Clear
+        </div>
+    </div>
+</div>

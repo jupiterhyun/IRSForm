@@ -1,0 +1,13 @@
+1) install Node.js
+
+https://nodejs.org/en/download/
+
+2) Open Node.js cmd and goto the project folder 
+
+3) npm install --save-dev
+
+4) npm start
+
+5) in your browser: 
+
+http://localhost:8080/webpack-dev-server/

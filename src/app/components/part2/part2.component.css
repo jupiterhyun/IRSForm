@@ -1,0 +1,270 @@
+.left-panel {
+    width: 35%;
+    height: 80%;
+    float: left;
+    border-right: 1px solid #dbe3eb;
+}
+
+.right-panel {
+    width: 65%;
+    height: 80%;
+    float: left;
+}
+
+.down-panel {
+    width: 100%;
+    height: 10%;
+    border-top: 1px solid #dbe3eb;
+    float: left;
+}
+
+
+/*left section*/
+
+.sectionEF {
+    width: 100%;
+    height: 31%;
+    border-bottom: 1px solid #dbe3eb;
+}
+
+.ajust-top-margin {
+    margin-top: 5px;
+}
+
+.ajust-title-font {
+    font-size: calc(9px + 0.5vh);
+}
+
+.float-left {
+    float: left;
+}
+
+.ajust-section-text-height {
+    height: 20%;
+}
+
+.sectionG {
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid #dbe3eb;
+}
+
+.container {
+    position: relative;
+    left: 11.5px;
+    padding-left: 15px;
+    padding-top: 2px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: solid 0.5px #cfd7df;
+}
+
+.container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+    height: 13px;
+    width: 13px;
+    border: solid 2.5px #2196F3;
+}
+
+.sectionH {
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid #dbe3eb;
+}
+
+.sectionI1 {
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid #dbe3eb;
+}
+
+.sectionI2 {
+    width: 100%;
+    height: 14%;
+    border-bottom: 1px solid #dbe3eb;
+    display: inline-block;
+}
+
+
+/*right panel*/
+
+.right-pannel-up {
+    width: 100%;
+    height: 45%;
+}
+
+table.share-table {
+    position: relative;
+    left: 11px;
+    top: 5px;
+    width: 90%;
+    border: solid 0.5px rgba(0, 0, 0, 0.08);
+    border-collapse: collapse;
+    font-size: calc(9px + 0.5vh);
+}
+
+table.share-table th {
+    padding: 1px;
+    text-align: center;
+}
+
+table.share-table td {
+    text-align: left;
+    height: 18px;
+}
+
+table.share-table tbody tr td:nth-child(odd) {
+    width: 7%;
+}
+
+table.share-table td:nth-child(even) input {
+    width: 100%;
+    height: 15px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    border: solid 0.5px rgba(0, 0, 0, 0.08);
+}
+
+table.share-table tr:nth-child(3) td {
+    background-color: #f2f3f4;
+}
+
+table.right-table-2 {
+    font-size: calc(9px + 0.5vh);
+    width: 90%;
+    display: block;
+}
+
+table.right-table-2-pos {
+    position: relative;
+    left: 9px;
+    top: 7px;
+}
+
+table.right-table-2 td input {
+    height: 15px;
+    width: 100%;
+    border-radius: 1px;
+    background-color: #ffffff;
+    border: solid 0.5px rgba(0, 0, 0, 0.08);
+}
+
+table.right-table-2 td:nth-child(1) {
+    width: 60%;
+    height: 15px;
+    font-family: Roboto;
+    text-align: left;
+    color: #2c3e50;
+}
+
+table.right-table-2 td:nth-child(2) {
+    width: 20%;
+    text-align: right;
+}
+
+table.right-table-2 td:nth-child(3) {
+    width: 30%;
+}
+
+
+/*right down*/
+
+.right-pannel-down {
+    width: 100%;
+    height: 55%;
+    border-top: 1px solid #dbe3eb;
+}
+
+table.right-table-3-pos {
+    position: relative;
+    left: 9px;
+    top: 5px;
+}
+
+.sectionLselect {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    height: 40px;
+    display: inline-block;
+}
+
+.sectionLselect-len {
+    width: 25%;
+    float: left;
+}
+
+.ajust-check {
+    margin-top: -2px;
+}
+
+.sectionM {
+    width: 100%;
+    height: 20px;
+    top: 10px;
+}
+
+.sectionMselect {
+    width: 30%;
+    /* float: left; */
+    float: right;
+}
+
+.sectionMselect-len {
+    width: 25%;
+    float: left;
+}
+
+
+/*down btn group */
+
+.sub-nav-left:hover {
+    background-color: #D6D6D6;
+    cursor: pointer;
+}
+
+.sub-nav-right:hover {
+    background-color: #E2E2E2;
+    cursor: pointer;
+}
+
+
+/* question mark */
+
+.right-question {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    padding: 4px;
+    background-color: #dbe3eb;
+    color: black;
+    font-weight: bold;
+    font-size: 9px;
+    vertical-align: text-top;
+}
+
+.right-question:hover {
+    cursor: pointer;
+    background-color: #E7E7E7;
+}

@@ -1,0 +1,78 @@
+.title-left {
+    width: 35%;
+    height: 10%;
+    background-color: #ffffff;
+    border-bottom: solid 0.5px #dbe3eb;
+    float: left;
+}
+
+.title-middle {
+    width: 50%;
+    height: 10%;
+    background-color: #ffffff;
+    border-left: solid 0.5px #dbe3eb;
+    border-right: solid 0.5px #dbe3eb;
+    border-bottom: solid 0.5px #dbe3eb;
+    float: left;
+}
+
+.title-right {
+    width: 15%;
+    height: 10%;
+    background-color: #ffffff;
+    border-bottom: solid 0.5px #dbe3eb;
+    float: left;
+}
+
+.title {
+    width: 90%;
+    height: 10%;
+    text-align: left;
+    /* font-size: 10px; */
+    font-size: calc(7px + 0.5vh);
+    color: #2c3e50;
+}
+
+.title-pos {
+    position: relative;
+    left: 2%;
+    top: 5%;
+    width: 100%;
+}
+
+.title .title-head {
+    line-height: calc(25px + 0.5vh);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.year-pos {
+    position: relative;
+    left: 20%;
+    top: 15%;
+    width: 160px;
+}
+
+.year-1 {
+    width: 23%;
+    height: 30%;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: #ffffff;
+    -webkit-text-stroke: 0.5px #979797;
+    float: left;
+}
+
+.year-2 {
+    width: 23%;
+    height: 30%;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: #2c3e50;
+    float: left;
+}
